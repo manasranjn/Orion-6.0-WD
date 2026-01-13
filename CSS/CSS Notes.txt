@@ -1,0 +1,76 @@
+CSS:-
+-CSS Stands for Cascading Stylesheet.
+-It is a style sheet language, used for describing the presentation of a document written in a markup language like HTML.
+-It is used to add styles to web pages.
+-There are three ways to add CSS/styles to a web page. They are-
+i)Inline CSS
+ii)Internal CSS
+iii)External CSS
+
+Inline CSS:-
+-Adding styles for an individual elements with the help of style attribute.
+-It has the most priority to apply CSS/styles.
+Syntax:-  <p style="font-size: 35px; font-weight: bolder;">This is a product</p>
+
+Internal CSS:-
+-Writting CSS in the same document inside head tag by using the <style> element is called as Internal CSS.
+-Used to add styles for multiple elements.
+-We need selectors to target or select specific elements to apply CSS/styles.
+Syntax:- <style>
+			selector{
+				css-property: value;
+				}
+		</style>
+	
+External CSS:-
+Writting CSS in a separate file and then connecting it to the HTML/markup document with the help of <link> tag is known as External CSS.
+-We use <link> tag inside the head tag to connect the external CSS to the specific HTML document.
+Syntax:- <link rel="stylesheet" herf="file.css">
+
+Selectors In CSS:-
+-CSS selectors are used to select HTML elements that we want to style.
+-There are mainly 6 types of selectors are there.
+1)Universal/Global Selector:-
+-It is used to select all the elements that present in the HTML document.
+-It applies the CSS for each and every element in the document.
+-It is denoted by *
+e.g:- *{
+		color: red;
+	}
+
+2)id Selector:- 
+-It selects an HTML element based on the given id name by using id attribute.
+-Id name should be unique in the entire HTML document.
+-To select the id names in CSS we have to use hash(#) that acts as id selector.
+e.g:- #idName{
+		font-size: 30px;
+	}
+	
+3)class Selector:-
+-It selects numbers of elements based on the given class name by using class attribute.
+-Class name can be duplicate.
+-To select the class names in CSS we have to use dot(.) sybmol thatv acts as class selector.
+e.g:- .className{
+		background-color: green;
+	}
+
+4)Element Selector:- 
+-It is used to select numbers of elemnts from an HTML document based on their tag name.
+-Element selector selects all the elements with the specific tag name in the entire document.
+e.g:- h1{
+		font-size: 20px;
+	}
+
+5)Descendant Selector:-
+-It is used to select some specific elements within a parent element.
+e.g:- .className p{
+		background-color: yellow;
+	}
+
+6) Group Selector:-
+-It is used to select multiple elements at once.
+-We can use class selector, id selector, element selector, or descendant selector to select multiple elements at once, and each selector should be separated by a comma.
+e.g:- .className, #idName, p{
+		font-weight: 300;
+		font-size30px;
+	}

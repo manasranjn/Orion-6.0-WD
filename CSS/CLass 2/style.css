@@ -1,0 +1,36 @@
+/* * {
+    color: red;
+    font-size: 30px;
+    text-align: center;
+    background-color: aliceblue;
+} */
+
+#mainHeading {
+    color: blue;
+    text-align: left;
+}
+
+.subHeading {
+    color: green;
+    text-align: right;
+}
+
+p {
+    color: black;
+}
+
+.box p {
+    color: red;
+}
+
+h3,
+.container,
+#text {
+    color: black;
+    font-size: 25px;
+    text-align: center;
+}
+
+.head1 {
+    text-decoration: line-through;
+}
