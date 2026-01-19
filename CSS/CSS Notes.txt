@@ -138,3 +138,19 @@ e.g:-
 3. Inline-block:- Displays all the element in the same row and also can change height and width. 
 
 4. None:- The element will not display in the web page.
+
+
+# Flex-box:-
+-This property is used to structure the elements in row wise or column wise by giving space allocation for individual elements within the flex area.
+Properties:- 
+1. flex-direction:- It specifies from which direction the elements should be aligned.
+Values:-
+flex-direction: row/row-reverse/column/column-reverse ;
+
+2. align-items:- This property is used to align the items vertically in flex area.
+Values:-
+align-items: flex-start/center/flex-end ;
+
+3. justify-content:- This is used to align the elements horizontally in the flex area.
+Values:- 
+justify-content: start/center/end/space-between/space-around/space-evenly
