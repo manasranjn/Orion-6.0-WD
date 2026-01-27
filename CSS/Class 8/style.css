@@ -1,0 +1,96 @@
+#btn {
+    background-color: cadetblue;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#btn:active {
+    padding: 12px 25px;
+}
+
+.box {
+    height: 200px;
+    width: 200px;
+    background-color: red;
+    margin: 10px;
+    border-radius: 10px;
+    /* transition-property: height, width, background-color;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+    transition-delay: 1s; */
+    transition: all 1s linear;
+}
+
+.box:hover {
+    background-color: green;
+    height: 300px;
+    width: 300px;
+}
+
+.static {
+    background-color: black;
+    height: 200px;
+    width: 200px;
+    color: white;
+    position: static;
+    top: 20px;
+    bottom: 300px;
+}
+
+.relative {
+    background-color: green;
+    height: 200px;
+    width: 200px;
+    color: white;
+    position: relative;
+    /* right: 20px; */
+    left: 30px;
+    top: 50px;
+    /* bottom: 100px; */
+}
+
+.container {
+    background-color: bisque;
+    height: 500px;
+    width: 500px;
+    position: relative;
+}
+
+.absolute {
+    background-color: navy;
+    height: 200px;
+    width: 200px;
+    color: white;
+    position: absolute;
+    /* top: 0;
+    left: 0; */
+    right: 0;
+    bottom: 0;
+}
+
+.fixed {
+    background-color: rgb(183, 31, 168);
+    height: 200px;
+    width: 200px;
+    color: white;
+    position: fixed;
+    top: 200px;
+    right: 400px;
+}
+
+.sticky {
+    background-color: rgb(88, 23, 23);
+    height: 200px;
+    width: 200px;
+    color: white;
+    position: sticky;
+    left: 200px;
+    /* top: 0px; */
+    /* bottom: 0; */
+}
