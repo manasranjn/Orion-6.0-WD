@@ -1,0 +1,111 @@
+.spinner {
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    border: 10px solid black;
+    border-bottom: 10px solid white;
+    /* animation-name: spinner;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; */
+    /* animation-direction: reverse; */
+    /* animation-direction: alternate; */
+    /* animation-direction: alternate-reverse;
+     */
+    /* animation-delay: 2s; */
+    animation: spinner 2s ease-in-out infinite;
+}
+
+@keyframes spinner {
+
+    /* from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    } */
+    0% {
+        transform: rotate(0deg);
+    }
+
+    10% {
+        transform: rotate(40deg);
+    }
+
+    40% {
+        transform: rotate(90deg);
+    }
+
+    75% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.parent {
+    height: 300px;
+    width: 700px;
+    border: 2px solid black;
+}
+
+.ball {
+    height: 50px;
+    width: 50px;
+    background-color: black;
+    border-radius: 50%;
+    /* animation: drop 2s linear infinite alternate; */
+    animation: slide 2s linear infinite alternate;
+    /* margin: auto; */
+
+}
+
+@keyframes slide {
+    0% {
+        transform: translate(0);
+    }
+
+    33% {
+        transform: translate(180px, 250px);
+    }
+
+    67% {
+        transform: translate(466px, 0px);
+    }
+
+    100% {
+        transform: translate(650px, 250px);
+    }
+}
+
+/* @keyframes drop {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(650px);
+    }
+} */
+
+
+.box {
+    height: 600px;
+    width: 1200px;
+    /* min-width: 450px; */
+    background-color: blueviolet;
+}
+
+@media (max-width: 450px) {
+    .box {
+        background-color: green;
+    }
+}
+
+@media (min-width: 450px) and (max-width: 800px) {
+    .box {
+        background-color: red;
+    }
+}
