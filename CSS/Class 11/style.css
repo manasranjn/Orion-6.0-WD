@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 body::-webkit-scrollbar {
@@ -42,7 +43,8 @@ nav div {
     gap: 10px;
 }
 
-nav select {
+nav select,
+.language {
     background-color: #111313;
     border: 1px solid gray;
     border-radius: 5px;
@@ -119,14 +121,15 @@ nav button {
     border-top: 5px solid #e41520;
 }
 
-.trending {
-
+.trending,
+.reasons,
+.faq-section {
     background-color: black;
     padding: 20px 150px;
-    color: white;
 }
 
-.trending h4 {
+.sub-heading {
+    color: white;
     font-size: 28px;
     margin: 15px 0;
 }
@@ -136,7 +139,7 @@ nav button {
     gap: 40px;
     width: 100%;
     overflow-x: scroll;
-    /* z-index: -1; */
+    padding: 10px;
 }
 
 .movies::-webkit-scrollbar {
@@ -144,27 +147,122 @@ nav button {
 }
 
 .movie {
-    width: 200px;
+    width: 230px;
+    height: 280px;
     border-radius: 10px;
-    background-color: #e41520;
     position: relative;
+    background-color: red;
 }
 
 .movie img {
     border-radius: 10px;
-    /* height: 100%; */
-    width: 200px;
+    height: 100%;
+    object-fit: cover;
+
 }
 
 .movie h2 {
     position: absolute;
     left: -20px;
-    bottom: 20px;
+    bottom: 0px;
     font-size: 100px;
+    color: white;
 }
 
+.reasons-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    color: white;
+}
 
-@media (max-width: 450px) {
+.reason {
+    background: linear-gradient(135deg, #1A2145, #210E17);
+    padding: 20px;
+    border-radius: 10px;
+    height: 300px;
+    position: relative;
+}
+
+.reason h4 {
+    font-size: 25px;
+    margin-bottom: 20px;
+    width: 90%;
+}
+
+.reason p {
+    font-size: 15px;
+    color: rgb(173, 173, 173);
+}
+
+.reason i {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    font-size: 50px;
+    color: #F884AF;
+}
+
+.faqs {
+    color: white;
+}
+
+.faq {
+    background-color: rgba(59, 59, 59, 0.622);
+    padding: 25px 20px;
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+    font-size: 30px;
+}
+
+.faq h5 {
+    font-weight: 100;
+}
+
+footer {
+    background-color: black;
+    padding: 30px 150px 150px;
+}
+
+.qna {
+    color: #b1b1b1;
+    font-size: 18px;
+}
+
+.footer-grids {
+    padding: 50px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.footer-grids ul {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    list-style: none;
+}
+
+.footer-grids ul a {
+    color: #b1b1b1;
+    font-size: 14px;
+
+}
+
+@media (max-width: 780px) {
+    .footer-grids {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .qna {
+        font-size: 15px;
+    }
+
+    footer {
+        padding: 20px;
+    }
+
     nav {
         padding: 20px;
     }
@@ -200,8 +298,63 @@ nav button {
         font-size: 18px;
         font-weight: normal;
     }
+
+    .trending,
+    .reasons,
+    .faq-section {
+        padding: 20px;
+    }
+
+    .trending h4 {
+        font-size: 20px;
+    }
+
+    .movies {
+        gap: 50px;
+    }
+
+    .movie {
+        width: 100px;
+        height: 180px;
+    }
+
+    .movie h2 {
+        font-size: 70px;
+        left: -10px;
+    }
+
+    .reasons-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+    }
+
+    .reason {
+        height: 200px;
+    }
+
+    .reason h4 {
+        font-size: 20px;
+    }
+
+    .faq {
+        font-size: 20px;
+    }
 }
 
+@media (min-width: 780px) and (max-width:1200px) {
+    .reasons-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .reason {
+        height: 200px;
+    }
+}
+
+/* 
 @media (min-width: 450px) and (max-width: 780px) {
     nav {
         padding: 20px;
@@ -210,4 +363,4 @@ nav button {
     nav img {
         height: 30px;
     }
-}
+} */
