@@ -22,3 +22,20 @@ const c = 1
 // console.log(x);
 
 // y = 10
+
+
+const box = document.querySelector('.box')
+const button = document.getElementById('btn')
+
+button.onclick = () => {
+    console.log("Hello");
+    // box.style.backgroundColor = 'white'
+
+    box.style.backgroundColor === "black" ? box.style.backgroundColor = 'white' : box.style.backgroundColor = 'black'
+
+    // if (box.style.backgroundColor === 'black') {
+    //     box.style.backgroundColor = 'white'
+    // } else {
+    //     box.style.backgroundColor = 'black'
+    // }
+}
