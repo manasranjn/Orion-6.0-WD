@@ -152,3 +152,93 @@ Syntax:-
 for(initializaton; condition; iteration){
     //instruction
 }
+
+## while loop:- 
+- When we know starting point but we don't know the ending point, we use while loop.
+Syntax:-
+initializaton;
+while(condition){
+    //instruction
+    iteration;
+}
+
+## do-while loop:-
+- do-while loop is similar to the while loop, but the only difference is that it executes the instruction first then it checks the condition. That's why even if the condition is false still the block of code will execute at-least once.
+Syntax:-
+initializaton;
+do{
+    //instruction
+    iteration;
+}while(condition);
+
+## for-of loop:-
+- for-of is a loop that iterates through the values of an iterable (such as an array or string).
+- It directly provides each value of the iterable, which can be processed within the loop.
+Syntax:- 
+for(let iterator of variable){
+    //instruction
+}
+
+## for-in loop:-
+- for-in is a loop that iterates through the keys of an object.
+Syntax:- 
+for(let iterator in variable){
+    //instruction
+}
+
+# Function in JS:- 
+-Functions are a set of instruction or block of code used to perform some specific task.
+-There are two types of functions:-
+    -Pre-defined functions
+    -User-defined Functions
+
+## Pre-defined function:-
+-A function which is already written by JS developers with some specific task is known as pre-defined function.
+e.g:- push(), pop(), log(),....
+
+## User-defined function:- 
+- A function which is declared and written some instruction by the user is known as user-defined function.
+e.g: normal function,...
+-In JS to return a output from a function, we use "return" keyword.
+-There are two way we can create a function-
+i)-Type-A(Without parameter):- A function without parameters does not require any external input when called.
+-It simply executes a set of instructions.
+e.g:- function greet(){
+    print("Hello, everyone!")
+}
+greet()
+
+ii)-Type-B(With parameter):- A function with parameters allows us to pass values to customize its behavior.
+e.g:- function greet(name){
+    print(f"Hello, {name}!")
+}
+greet("Manas")  
+
+## Types of user-defined function:-
+1. Normal function:- A function which is declared using both function keyword and function name is known as normal function. 
+Syntax:- function functionName(parameter){
+    //instruction
+}
+
+2. Anonymous function:- A function which is declared without a function name but declared using function keyword and stored in a variable is called as anonymous function.
+Syntax:- const variableName = function(){
+    //instruction
+}
+
+3. Arrow function:- A function without a function keyword. 
+-Instead of function keyword we use arrow symbol.
+Syntax:- const functionName = ()=>{
+    //instruction
+}
+
+4. Callback function:- It is a function which is used to pass as an argument to another function.
+Syntax:- ()=>{
+    //instruction
+}
+
+# forEach() :-
+-It is a looping condition where the iterator of forEach loop will iterates through every elements in the array.
+Syntax:- array.forEach((iterator)=>{
+    //instruction
+})
+-It takes a Callback function as an argument in which the user will pass the iterator(accumulator) that iterates through every element of the array.
