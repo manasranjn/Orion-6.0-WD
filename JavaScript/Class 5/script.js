@@ -119,9 +119,14 @@ const total = (a = 0, b = 0) => {
 // console.log(total());
 
 //? Anonymous Function
-const functionName = function () {
-    instruction
+// const functionName = function () {
+//     instruction
+// }
+
+const subract = function (a, b) {
+    return a - b
 }
+// console.log(subract(100, 20));
 
 
 //? Callback Function
