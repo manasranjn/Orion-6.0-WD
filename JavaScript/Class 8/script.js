@@ -1,1 +1,47 @@
+//! String and It's inbuilt methods
+let str = 'Lorem ipsum dolor ipsum sit amet ipsum ipsum consectetur adipisicing elit.'
+// console.log(str);
+// console.log(str[10]);
 
+let name = "Smith"
+let age = 25
+let job = 'Software Developer'
+
+// console.log("Hello, my name is", name, "and my age is", age, ", I'm working as a", job);
+// console.log("Hello, my name is name, and my age is age, I'm working as a job");
+
+//? Template String
+let example = `Hello I'm smith`
+
+//? Template Literal
+// ${name}
+
+//? Template Interpolation
+// console.log(`Hello, my name is ${name}, my age is ${age}, and I'm working as a ${job}`);
+
+//! Methods
+//? charAt()
+// console.log(str.charAt(10));
+
+//? indexOf()
+// console.log(str.indexOf('ipsum'));
+
+//? lastIndexOf()
+// console.log(str.lastIndexOf('ipsum'));
+
+//? toLowerCase()
+// console.log(str.toLowerCase());
+
+//? toUperCase()
+// console.log(str.toUpperCase());
+
+//? slice()
+let subStr = str.slice(0, 10)
+// console.log(subStr);
+
+//? split()
+// [lorem, ispusm, dolor, ipsum]
+//[lorem , dolor , sit amet ]
+
+let arr = str.split(' ')
+console.log(arr);
