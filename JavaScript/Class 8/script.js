@@ -44,4 +44,15 @@ let subStr = str.slice(0, 10)
 //[lorem , dolor , sit amet ]
 
 let arr = str.split(' ')
-console.log(arr);
+// console.log(arr);
+
+//? length
+// console.log(str.length);
+
+//? replace()
+let newStr = str.replace('ipsum', 'hi')
+console.log(newStr);
+
+//? replaceAll()
+let newStr2 = str.replaceAll('ipsum', 'hi')
+console.log(newStr2);
