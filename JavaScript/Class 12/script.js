@@ -22,7 +22,6 @@ const input = document.getElementById('input')
 
 
 //! Event Listner
-
 // node.eventListner(eventType, ()=>{
 // })
 
