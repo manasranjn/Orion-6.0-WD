@@ -1,0 +1,86 @@
+//! Synchronous and Asynchronous
+// console.log("One");
+// console.log("Two");
+// console.log("Three");
+// setTimeout(() => {
+//     console.log("Four");
+// }, 2000)
+// console.log("Five");
+// setTimeout(() => {
+//     console.log("Four");
+// }, 2000)
+
+//! Callback Hell
+// ()=>{
+//     ()=>{
+//         ()=>{
+//             ()=>{
+//                 ()=>{
+
+//                 }
+//             }
+//         }
+//     }
+// }
+
+function getUser(userId, callback) {
+    setTimeout(() => {
+        console.log("User data fetched");
+        callback({ id: userId, name: "John Doe" });
+    }, 1000);
+}
+
+function getUserPosts(userId, callback) {
+    setTimeout(() => {
+        console.log("User posts fetched");
+        callback([{ postId: 1, title: "Post 1" }, { postId: 2, title: "Post 2" }]);
+    }, 1000);
+}
+
+function getPostComments(postId, callback) {
+    setTimeout(() => {
+        console.log("Comments for post fetched");
+        callback([{ commentId: 101, text: "Nice post!" }]);
+    }, 1000);
+}
+
+//? Nested Callbacks (Callback Hell)
+// getUser(1, (user) => {
+//     getUserPosts(user.id, (posts) => {
+//         getPostComments(posts[0].postId, (comments) => {
+//             console.log("Comments: ", comments);
+//         });
+//     });
+// });
+
+//! Promise
+// pending
+// resolve
+// rejected
+//? .then()
+//? .catch()
+
+// Promise
+//     .then(() => {
+
+//     })
+//     .catch(() => { })
+
+//? fetch()
+// fetch('api')
+//     .then((res) => {
+
+//     }).catch((err) => {
+
+//     })
+
+fetch('https://jsonplaceholder.typicode.com/users')
+    .then((res) => {
+        console.log("Response Successful", res)
+        res.json()
+            .then((data) => {
+                console.log(data);
+            })
+    }).catch((err) => {
+        console.log("Response Failed", err);
+    })
