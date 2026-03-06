@@ -51,9 +51,36 @@ x = 20
 // }
 // greet()
 
-sayHello()
+// sayHello()
 
-function sayHello() {
-    console.log("Hello everyone");
+// function sayHello() {
+//     console.log("Hello everyone");
+// }
+// sayHello()
+
+
+async function getApiData() {
+    const res = await fetch('https://jsonplaceholder.typicode.com/posts') // 1
+    // console.log(res); //1
+
+    const data = await res.json() //1
+    // console.log(data); //1
+
+    const box = document.getElementById('box')
+
+    data.forEach((item) => {
+        const heading = document.createElement('h2')
+        const paragraph = document.createElement('p')
+
+        heading.textContent = item.title
+        paragraph.textContent = item.body
+
+        box.append(heading)
+        box.append(paragraph)
+    })
+
 }
-sayHello()
+
+getApiData()
+
+
