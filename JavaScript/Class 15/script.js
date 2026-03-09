@@ -60,11 +60,11 @@ x = 20
 
 
 async function getApiData() {
-    const res = await fetch('https://jsonplaceholder.typicode.com/posts') // 1
+    const res = await fetch('https://dummyjson.com/products') // 1
     // console.log(res); //1
 
     const data = await res.json() //1
-    // console.log(data); //1
+    console.log(data); //1
 
     const box = document.getElementById('box')
 
