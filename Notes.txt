@@ -1,1 +1,4 @@
-1)Difference between input type button and <button> tag
+React:- 
+-Single Page Application vs Multi Page Application
+-Component Based Architecture- Component
+-Library
