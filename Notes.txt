@@ -2,3 +2,18 @@ React:-
 -Single Page Application vs Multi Page Application
 -Component Based Architecture- Component
 -Library
+
+
+Props:-
+
+App
+	Card price-200
+	Card price-400
+	Card price-250
+	Card
+	
+App.jsx -> Card.jsx
+
+App.jsx -> AllCourses.jsx -> Courses.jsx -> CourseDetails.jsx
+
+App.jsx -> AccedemicDetails -> AllStudents -> StudentData -> PersonalDetails, CourseDetails
