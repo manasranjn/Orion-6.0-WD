@@ -17,3 +17,21 @@ App.jsx -> Card.jsx
 App.jsx -> AllCourses.jsx -> Courses.jsx -> CourseDetails.jsx
 
 App.jsx -> AccedemicDetails -> AllStudents -> StudentData -> PersonalDetails, CourseDetails
+
+
+Hooks:- useState(), useEffect(), useRef()....
+States:-
+
+useState():-
+const [stateVariable, setStateVariable] = useState(initialValue)
+
+CSS in React:-
+1. Inline CSS
+2. Style Object
+3. Global CSS
+4. Module CSS
+
+const style ={
+	color: red,
+	fontsize : 20px
+	}
