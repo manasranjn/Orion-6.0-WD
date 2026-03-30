@@ -479,3 +479,153 @@ export default Counter;
 - It is a type of CSS where we will be maintaining one CSS file for each component.
 - Whenever we are using module CSS, we have to create a separate CSS file for each component with an extension of ".module.css" and import it in the component.
 e.g : filename.module.css
+
+
+    const data = await response.json();
+    setData(data);
+    console.log(data);
+
+};
+
+useEffect(() => {
+getUsers();
+}, []);
+
+return (
+
+<div>
+{data.map((item, index) => {
+return (
+<div key={item.id}>
+<p>Name: {item.name}</p>
+<p>Email: {item.email}</p>
+<p>Address: {item.address.street}</p>
+<p>Company: {item.company.name}</p>
+</div>
+);
+})}
+</div>
+);
+};
+
+export default UserData;
+
+# useEffect():
+- It is a Hook in React.
+- It allows us to perform side effects in functional components.
+- It is used for fetching data from an API, updating the document title, and more.
+- It has 3 trpes of dependencies:
+  - No dependency :- useEffect(() => {})
+  - Empty dependency :- useEffect(() => {}, [])
+  - Value dependency :- useEffect(() => {}, [value])
+
+# Reference in React:
+- It is a inbuilt object in React.
+- It is used to target elements in react.
+- By default it will be having key-value pair of "current: undefined".
+- ref will always uses Real DOM.
+- In Functional Component, we have to use useRef() Hook to create reference.
+- e.g: const inputRef = useRef();
+
+example:-
+import React, { useRef } from "react";
+
+const Reference = () => {
+const reference = useRef();
+console.log(reference); // {current: undefined}
+let changeColor = () => {
+reference.current.style.color = "red";
+}
+return(
+
+  <div>
+    <h1 ref={reference}>Reference</h1>
+    <button onClick={changeColor}>Click</button>
+  </div>
+)}
+export default Reference
+
+# Form Handling in React:
+1. Uncontrolled Forms
+2. Controlled Forms
+
+## UnControlled Forms
+- It is a form where it is created using reference concept.
+- In Functional components, we have to use useRef() Hook to create uncontrolled form.
+- These forms are completely handled by DOM itself.
+- Suppose if we have to take input from user, first the data will be taken by DOM and then we will be taking the data from DOM.
+
+example:-
+import React, { useRef } from "react";
+
+const UncontrolledForm = () => {
+const fName = useRef();
+const lName = useRef();
+
+const handleSubmit = (e) => {
+e.preventDefault();
+const name = {
+firstName: fName.current.value,
+lastName: lName.current.value,
+};
+console.log(name);
+};
+
+return (
+
+<form>
+<input type="text" placeholder="First Name" ref={fName} />
+<input type="text" placeholder="Last Name" ref={lName} />
+<button onClick={handleSubmit}> Submit </button>
+</form>
+)};
+export default UncontrolledForm;
+
+## Controlled Form
+- Thse forms are created using states in React.
+- In functional component we use useState() to create controlled forms.
+- These Forms are completely handled by developers where we will be taking the data from the users by using "onChange" event.
+  example:-
+  import React, { useState } from "react";
+
+const ControlledForm = () => {
+const [name, setName] = useState("");
+const [email, setEmail] = useState("");
+const [password, setPassword] = useState("");
+
+const getName = (e) => {
+setName(e.target.value);
+};
+const getEmail = (e) => {
+setEmail(e.target.value);
+};
+const submitData = (e) => {
+e.preventDefault();
+let data = {
+name: name,
+email: email,
+password: password,
+};
+console.log(data);
+setEmail("");
+setName("");
+setPassword("");
+};
+return (
+
+<form>
+<label>Name: </label>
+<input type="text" value={name} onChange={getName} /> <br />
+<label>Email: </label>
+<input type="email" value={email} onChange={getEmail} /> <br />
+<label>Password: </label>
+<input
+type="password"
+value={password}
+onChange={(e) => setPassword(e.target.value)}
+/>
+<br />
+<button onClick={submitData}>Submit</button>
+</form>
+)};
+export default ControlledForm;

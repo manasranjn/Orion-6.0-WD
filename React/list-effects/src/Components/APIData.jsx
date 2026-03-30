@@ -10,9 +10,10 @@ const APIData = () => {
     console.log(data);
     setData(data);
     console.log(count);
+    // setCount(count + 1);
   };
 
-  //   getData();
+  // getData();
 
   useEffect(() => {
     getData();

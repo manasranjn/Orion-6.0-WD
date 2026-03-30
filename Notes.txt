@@ -35,3 +35,43 @@ const style ={
 	color: red,
 	fontsize : 20px
 	}
+	
+List:- 
+Option-1
+ return (
+    <div>
+      <h1>List of items</h1>
+      {products.map((item) => {
+		return(
+			<h1>Name: {item.name}</h1>
+		)
+	  })}
+    </div>
+  );
+  
+Option-2
+ return (
+    <div>
+      <h1>List of items</h1>
+      {products.map((item) => (
+	  			<h1>Name: {item.name}</h1>
+	  ))}
+    </div>
+  );
+  
+import {useEffect} from "react";
+
+useEffect(()=>{
+
+}, [variabel])
+
+
+Reference:-
+
+h1- ref=refVar
+p-
+
+refVar = useRef()
+
+{current: undefined }
+{current: h1 }
