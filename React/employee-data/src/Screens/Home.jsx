@@ -1,6 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 const Home = () => {
+  const [employeeData, setEmployeeData] = useState([]);
+
+  const getAllData = () => {
+    axios
+      .get("http://localhost:5000/employees")
+      .then((res) => {
+        console.log(res.data);
+        setEmployeeData(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  useEffect(() => {
+    getAllData();
+  }, []);
+
   return (
     <div className="min-h-screen  bg-[#F0F0DB] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-rows-3 gap-5 px-8 md:px-12 lg:px-20 py-10">
       <EmployeeCard />

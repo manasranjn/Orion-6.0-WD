@@ -1,5 +1,26 @@
 {
-    "employees":[
-        
-    ]
+  "employees": [
+    {
+      "name": "manas",
+      "designation": "SDE",
+      "salary": "1",
+      "experience": "1",
+      "id": "Uxotds73KRw"
+    },
+    {
+      "name": "Pabitra",
+      "designation": "Software Developer",
+      "salary": "50000",
+      "experience": "2",
+      "id": "SoX9qSV5P-Q"
+    },
+    {
+      "name": "Kaushal",
+      "designation": "DevOps Eng",
+      "salary": "65000",
+      "experience": "2",
+      "id": "T5p5TKCU-po"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
