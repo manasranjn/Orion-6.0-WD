@@ -16,6 +16,10 @@ const Counter = () => {
     cursor: "pointer",
   };
 
+  const obj = {
+    name: "Manas",
+  };
+
   return (
     <div
       style={{

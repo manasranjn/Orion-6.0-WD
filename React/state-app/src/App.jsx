@@ -1,7 +1,7 @@
 import React from "react";
 import Counter from "./Components/Counter";
 import Example from "./Components/Example";
-import "./global.css";
+// import "./global.css";
 
 const App = () => {
   return (
@@ -9,7 +9,7 @@ const App = () => {
       <h1 className="text-3xl font-black text-green-600">This is heading</h1>
       <p>This is a paragraph</p>
       <Counter />
-      <Example />
+      {/* <Example /> */}
     </div>
   );
 };

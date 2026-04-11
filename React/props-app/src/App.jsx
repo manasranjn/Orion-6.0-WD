@@ -25,9 +25,9 @@ function App() {
       <ProductCard />
       <ProductCard /> */}
 
-      <ProductCard name="Product 1" description="Product 1 description" />
+      {/* <ProductCard name="Product 1" description="Product 1 description" /> */}
 
-      {/* <AccedemicDetails personalData={personalData} courseData={courseData} /> */}
+      <AccedemicDetails personalData={personalData} courseData={courseData} />
     </div>
   );
 }
