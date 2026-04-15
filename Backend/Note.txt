@@ -1,0 +1,65 @@
+What is Backend Development ?
+-Backend Development is the part of web development that focuses on creating and managing the server side, database APIs of an application.
+-It is the backbone that support frontend handling, processing,storing ,and securing data that get displayed to the users.
+-Backend focuses on the server side of a website or application handling the data logic and integration required to ensure smooth functionality
+
+Role of a backend developer
+Build APIs --> Manage DB --> Handle Server Side Logic
+
+Key Components of Backend Development : 
+ 1)Database : USE for storing and retrieving data
+ 2)server : where code runs and request are processed
+ 3)API : it allows communication between frontend and backend
+ 4)Programming Languages : used to build the backend 
+ 5)Authentication 
+
+Node JS:
+--Its a JavaScript runtime environment that allows us to run JavaScript code outside of a web browser.
+--It is an open source cross platform JavaScript runtime environment that runs on chromes V8 Engine.
+--Node JS is known for its non-blocking I/O, Event driven architecture making it great for building scalable high performance
+
+Node JS Architecture :
+1-Event Driven
+2-Single Threaded /non-blocking I/O
+--It handle multiple connections using a single thread via the event loop and callback.
+--Operations like reading files ,databases or network calls do not block execution. 
+--Instead callback, promise, async await and else completion.
+
+Node REPL(Read-Evaluate-Print-Loop)
+--It is an interactive shell in Node.js, that allows to execute JavaScript code line by line and see immediate results.
+--It is useful for quick testing, debugging and learning where JavaScript code can be experimented with directly.
+
+How it Works ?
+--Read :It takes the user input
+--Evaluate :It evaluate the code immediately in the same line
+--Print :It Shows the output or result
+--LOOP :It waits for the next input until the user exits
+--To start Node REPL open terminal or cmd type (node) and press enter
+--To Exit we can use (.exit)
+--And to clear Environment (.clear)
+
+Module :
+--A module in Node.js is self contained unit of code placed in a file or folder ,capable of exporting functionality for use elsewhere.
+--Modules prevent global name space pollution help organising code and improve maintainability
+
+There are three types of modules
+1-BuiltIn Modules-Included with JS
+2-Local Modules -User defined or created by developers as a part of project
+3-External Modules - Installed via npm and stored in'node_modules'folder
+
+
+Modules in Node.js:-
+--Node uses a powerful module system to help organise code, promote reuse and encapsulate functionality of Node.js application structure.
+--There are two primary systems in Node.js
+ 1.CommonJS Modules and
+ 2.ES6/ECMA Script Modules
+
+CommonJS Module System:-
+--It is a traditional module system in node.js. It uses require() method  to import module and "module.export" or export functionality.
+--Each module or file wrap in a function exposing module, exports, require.
+--__filename and __dirname for local scope ensuring variable donot link into global scope.
+
+ES6/ECMA Script Modules:-
+--ES6 is the modern standardise utilising import and export. 
+--modules are loaded asynchronously for better performance.
+--we have to use type -> module in package.js to enable ES6.
