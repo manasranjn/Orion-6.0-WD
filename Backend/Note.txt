@@ -63,3 +63,44 @@ ES6/ECMA Script Modules:-
 --ES6 is the modern standardise utilising import and export. 
 --modules are loaded asynchronously for better performance.
 --we have to use type -> module in package.js to enable ES6.
+
+Node.js path module :
+--The Node.js path module is a built in module used to work with files and directory across different operating system ,allowing seamless cross platform development and file manipulation task.
+--path module helps handle differences in path format between operating system
+--it is used for manipulating ,joining,resolving,and normalising path  in model  application
+
+Path Module: (method)
+-> path.resolve():- Resolves an absolute path from relative segments.
+-> path.basename():- Gets the last part of a path.
+-> path.dirname():- It return the directory name of a path.
+-> path.extname():- It returns the file extension.
+-> path.isAbsolute():- It checks path is absolute or not.
+
+--To use path module in Node.js, we have to import it .
+
+Node.js FileSystem(fs):
+--Node.js filesystem(fs) module enables file and directory I/O operations offering both sysnchronous and asynchronous methods to handle files efficiently in different scenario.
+
+Use of fs module :
+--The Node.js fs module is a core part of Node.js, that allows programm to interact with the computer's filesystem.
+--Its primary use is to perform essential file and diectory Operations such as reading writing creating deleting and monitoring files. 
+
+Synchronous Method :
+--Sysnchronous method block execution until the operation completes, making other process wait, which can be inefficient for I/O bound task.
+--Some common sysnchronous method :-
+     ---fs.readFileSync()
+     ---fs.appendFileSync()
+     ---fs.mkdirSync()
+     ---fs.existsSync()
+     ---fs.writeFileSync()
+     ---fs.renameSync()
+
+Asynchronous Method :
+--Asynchronous method do not block execution instead they use callbacks, promises or async-await allowing other Operations to run curently and improving for heavy I/O workload.
+--These are preffered for sckelble eye-performance  application or server
+--Some common sysnchronous method :-
+     ---fs.unlink()
+     ---fs.readFile()
+     ---fs.appendFile()
+     ---fs.exits()
+     ---fs.rename()
