@@ -57,3 +57,87 @@ app.get("/",(req,res)=>{
     res.send("This is an example of response")
     console.log(req.method)
 })     
+
+Routes in Express.js:-
+--Routing defines how an applications end point respond to client requset 
+--Express.js uses method like get(), post(), put(), delete() etc to define routes according to http methods.
+--Routes consist of a path and a callback func with req and res parameters.
+--There are 2 types of routes :  normal route and parameterized route 
+ for ex:-  
+app.get("/books",(req,res)=>{
+     res.send("normal route")
+}) 
+app.get("/books/:id",(req,res)=>{
+    res.send("parameterized route")   
+})
+
+Route Parameter:
+--Route parameters are dynamic segments in the url path defined by using a single column(/books/:id),it allows capturing value directly from the url which are than accecible by using req.params in express
+  for Ex:
+  app.get("/books/:id",(req,res)=>{
+    res.send(parameterized route ${req.params.id})   
+  }) 
+
+--In express multiple parameters are allowed.
+--Route parameters are used to select a specific resource like fetching a specific user by id.
+
+
+QUERY STRING
+--Query strings are key value pairs appended to the end of a url after a queustion mark (?)
+  e.g: ?price=10000&color=red
+--In express query string are accessed in express via req.query object
+  e.g: app.get('/search',(req,res)=>{
+     res.send(Search for: ${req.query.q})
+})
+
+--Query string are used to filtering data ,searching or providing additional parameters to a request.
+
+Route Chaining: 
+--Route chaining allows defining multiple http methods for a single route using app.rout()
+--It keeps route declarations organized especially when handling different operation on one path. 
+e.g app.route('/books')
+    .get((req,res)=>{...})
+    .post((req,res)=>{...})
+    .put((req,res)=>{...})
+    .delete((req,res)=>{...})
+
+
+JSON:-
+--JSON stands for JavaScript object Notation.
+--It is a light weight text based data format for representig structured Data.
+--It uses key value pairs and it easy for both humans and machines to read or generate. 
+--It is used for data exchange between client and server in webapplications.
+e.g {
+      "name": "manas";
+      "age": 25 ;
+    }
+--In JSON format keys are also written in doublecot("").
+
+Use of JSON in Web Development:-
+--APIs typically send and recieve data in JSON format beacuse it is a language independent and supported by most programming languages. 
+--In express res.json(data) sends a JSON response while middleware like express.json()  and else incoming json request
+--Some common use cases are sending user data, configuration or the result of database query to the client.
+
+Q.1 What is the role of a middleware?
+ It is handle req and res  between the user and server.
+
+#Middleware:-
+-It is a function or software layer that sits between the request and response cycle in web applications in framework like Express.js which enable developer to add ,modify and handle functionalities for incoming request before they reach the final route handler.
+-It acts as an intermediate between frontend and backend for communication ,requesting ,handling,logging ,security and more.
+-In simpe we can say it is a function that receives request,response and the next callback as an argument which allows executing codes and make changes to request and request respond object.
+
+//Use of Middleware:
+-Middleware is wideely used for tasks such as authentication,login,error handling,passing request body and adding custom headers.
+-Some common built in and third party Middleware are expess.json(),customlogger(),course().
+-Middleware can be applied globally by using app.use() or to specific route by using app.get()/ app.post().
+
+#What is Next()?
+-The next() in Middleware passes control to the other Middleware function in the stack.
+-If a Middleware does not end the request respond cycle  it must call th enext() otherwise the request will hang and not be processed futher.
+
+#Types of Middleware:-
+1)Build in Middleware
+2)Third-party Middleware
+3)custom Middleware
+4)Application-level Middleware
+5)Router-level Middleware
