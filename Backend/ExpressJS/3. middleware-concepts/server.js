@@ -28,17 +28,17 @@ app.use(express.static("public"));
 // });
 
 //4.Application-Level Middleware
-// app.get(
-//     "/admin",
-//     (req, res, next) => {
-//         console.log("Checking admin access...");
-//         //You could authentication
-//         next();
-//     },
-//     (req, res) => {
-//         res.json({ message: "Welcome to Admin Panel!" });
-//     }
-// );
+app.get(
+    "/admin",
+    (req, res, next) => {
+        console.log("Checking admin access...");
+        //You could authentication
+        next();
+    },
+    (req, res) => {
+        res.json({ message: "Welcome to Admin Panel!" });
+    }
+);
 
 
 //5.Router-Level Middleware
@@ -51,6 +51,12 @@ userRouter.get("/profile", (req, res) => {
     res.json({ message: "User profile" });
 });
 
+userRouter.get("/example", (req, res) => {
+    res.json({ "message": "This is an example middleware" })
+})
+
+
+//!--------------
 app.get("/", (req, res) => {
     res.json({ message: "Welcome to Home page" });
 });

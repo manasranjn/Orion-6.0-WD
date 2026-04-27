@@ -124,11 +124,11 @@ Q.1 What is the role of a middleware?
 #Middleware:-
 -It is a function or software layer that sits between the request and response cycle in web applications in framework like Express.js which enable developer to add ,modify and handle functionalities for incoming request before they reach the final route handler.
 -It acts as an intermediate between frontend and backend for communication ,requesting ,handling,logging ,security and more.
--In simpe we can say it is a function that receives request,response and the next callback as an argument which allows executing codes and make changes to request and request respond object.
+-In simpe we can say it is a function that receives request, response and the next callback as an argument which allows executing codes and make changes to request and request respond object.
 
 //Use of Middleware:
--Middleware is wideely used for tasks such as authentication,login,error handling,passing request body and adding custom headers.
--Some common built in and third party Middleware are expess.json(),customlogger(),course().
+-Middleware is wideely used for tasks such as authentication, login, error handling, passing request body and adding custom headers.
+-Some common built in and third party Middleware are expess.json(),customlogger(), cors().
 -Middleware can be applied globally by using app.use() or to specific route by using app.get()/ app.post().
 
 #What is Next()?
@@ -138,6 +138,17 @@ Q.1 What is the role of a middleware?
 #Types of Middleware:-
 1)Build in Middleware
 2)Third-party Middleware
-3)custom Middleware
+3)Custom Middleware
 4)Application-level Middleware
 5)Router-level Middleware
+
+#EXPRESS ROUTER:-
+-It is a feature in express.js that allows us to create modular and mountable route handlers acting like a mini express application for specific part of API.
+-It helps us to organised routes into separates files like /users, /products, /login so large app stay clean, reusable and easy to maintain.
+-Express.router() create a separate router project or variable that can have its own routes and Middleware similar to the main app.
+
+#STATIC FILES IN EXPRESS:-
+-Express.js provide a built-in Middleware express.static() to serve static file from a folder such as public or assets.
+-Static file in express are files like image, CSS, client side JavaScript, pdf, etc that are sent to the browser without any server-side processing.
+-By using static() any file inside public folder becomes directly accessible by its path.
+-We can mount multiple static folders or add a url prefix like app.use('/assets',express.static('public')) to serve file under a specific route segment.
