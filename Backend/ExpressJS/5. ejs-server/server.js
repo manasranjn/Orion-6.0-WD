@@ -2,18 +2,18 @@ const express = require("express");
 const path = require("path");
 const expressLayouts = require("express-ejs-layouts");
 
-//instance express
+//! instance express
 const app = express();
 
-//set EJS as the view engine
+//! set EJS as the view engine
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
-//Use express ejs layouts
+//! Use express ejs layouts
 app.use(expressLayouts);
-app.set("layout", "layout");
+app.set("layout", "layout.ejs");
 
-//Middlewares
+//! Middlewares
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true })); //pass data from a form
 
@@ -24,11 +24,9 @@ app.get("/", (req, res) => {
     });
 });
 
-app.get("/about", (req, res) => {
-    res.render("about", {
-        title: "About Page",
-    });
-});
+app.get('/about', (req, res) => {
+    res.render('about.ejs', { title: "This is My About page" })
+})
 
 app.get("/variables", (req, res) => {
     res.render("variables", {
@@ -37,7 +35,7 @@ app.get("/variables", (req, res) => {
             name: "ABCD",
             age: 25,
             email: "abcd@gmail.com",
-            isActive: true,
+            isActive: false,
         },
     });
 });
@@ -47,7 +45,7 @@ app.get("/conditionals", (req, res) => {
         title: "EJS Conditionals",
         user: {
             isLoggedIn: true,
-            isAdmin: true,
+            isAdmin: false,
             hasItems: false,
         },
     });
@@ -60,14 +58,14 @@ app.get("/loop", (req, res) => {
     });
 });
 
-//Render the contact form
+//? Render the contact form
 app.get("/contact", (req, res) => {
     res.render("contact", {
         title: "EJS Contact Form",
     });
 });
 
-//Logic for data processing
+//* Logic for data processing
 app.post("/contact", (req, res) => {
     console.log("Form submitted", req.body);
     res.render("contact-success", {
@@ -75,6 +73,8 @@ app.post("/contact", (req, res) => {
         formData: req.body,
     });
 });
-//Start the server
-const PORT = process.env.PORT || 4000;
+
+
+//? Start the server
+const PORT = 4000;
 app.listen(PORT, console.log(`Server is running on the port ${PORT}`));
